@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vive Verde</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Poppins', sans-serif;
+      background:#f6f8f1;
+      color:#234;
+      line-height:1.6;
+    }
+
+    header{
+      background:white;
+      padding:20px 60px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky;
+      top:0;
+      z-index:1000;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .logo{
+      color:#2f6d3a;
+    }
+
+    .logo h1{
+      font-size:2rem;
+    }
+
+    .logo p{
+      font-size:0.9rem;
+      color:#666;
+    }
+
+    nav a{
+      margin-left:25px;
+      text-decoration:none;
+      color:#2f6d3a;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#76b947;
+    }
+
+    .hero{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:40px;
+      padding:70px 8%;
+    }
+
+    .hero-text h2{
+      font-family:'Dancing Script', cursive;
+      color:#6ba94b;
+      font-size:4rem;
+    }
+
+    .hero-text h3{
+      font-size:4rem;
+      color:#234d20;
+      line-height:1;
+      margin-bottom:20px;
+    }
+
+    .hero-text p{
+      font-size:1.2rem;
+      margin-bottom:30px;
+      color:#444;
+    }
+
+    .btn{
+      display:inline-block;
+      background:#6ba94b;
+      color:white;
+      padding:15px 30px;
+      border-radius:50px;
+      text-decoration:none;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#4f8536;
+      transform:scale(1.05);
+    }
+
+    .hero-img{
+      text-align:center;
+    }
+
+    .hero-img img{
+      width:100%;
+      max-width:500px;
+      border-radius:30px;
+      box-shadow:0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    section{
+      padding:70px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      color:#2f6d3a;
+      font-size:2.5rem;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+      gap:25px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:25px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    .card h3{
+      color:#2f6d3a;
+      margin:15px 0;
+    }
+
+    .posts{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .post{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .post img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .post-content{
+      padding:25px;
+    }
+
+    .post-content h3{
+      color:#2f6d3a;
+      margin-bottom:15px;
+    }
+
+    .subscribe{
+      background:#dff0d5;
+      border-radius:30px;
+      padding:50px;
+      text-align:center;
+    }
+
+    .subscribe h2{
+      color:#2f6d3a;
+      margin-bottom:15px;
+    }
+
+    .subscribe input{
+      width:60%;
+      max-width:400px;
+      padding:15px;
+      border:none;
+      border-radius:30px;
+      margin-top:20px;
+      outline:none;
+    }
+
+    .subscribe button{
+      padding:15px 25px;
+      border:none;
+      border-radius:30px;
+      background:#6ba94b;
+      color:white;
+      margin-left:10px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    footer{
+      background:#2f6d3a;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:900px){
+      .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+      }
+
+      .hero-text h2,
+      .hero-text h3{
+        font-size:3rem;
+      }
+
+      header{
+        flex-direction:column;
+      }
+
+      nav{
+        margin-top:15px;
+      }
+
+      .subscribe input{
+        width:100%;
+        margin-bottom:15px;
+      }
+
+      .subscribe button{
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <h1>🌿 Vive Verde</h1>
+    <p>Por un planeta mejor</p>
+  </div>
+
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Sobre mí</a>
+    <a href="#">Blog</a>
+    <a href="#">Recursos</a>
+    <a href="#">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h2>Pequeñas acciones,</h2>
+    <h3>grandes cambios</h3>
+    <p>
+      Un blog sobre medio ambiente y sostenibilidad para inspirar un futuro más verde y saludable.
+    </p>
+
+    <a href="#blog" class="btn">🌱 Explora el blog</a>
+  </div>
+
+  <div class="hero-img">
+    <img src="WhatsApp Image 2026-05-19 at 5.52.30 PM.jpeg" alt="Joven promoviendo sostenibilidad">
+  </div>
+</section>
+
+<section>
+  <div class="section-title">
+    <h2>🌎 En este blog encontrarás</h2>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>🌿 Consejos verdes</h3>
+      <p>Tips fáciles para vivir de forma sostenible cada día.</p>
+    </div>
+
+    <div class="card">
+      <h3>♻️ Vida sostenible</h3>
+      <p>Ideas para reutilizar, reciclar y reducir contaminación.</p>
+    </div>
+
+    <div class="card">
+      <h3>💚 Inspiración</h3>
+      <p>Historias y proyectos que ayudan al planeta.</p>
+    </div>
+
+    <div class="card">
+      <h3>🌱 Educación ambiental</h3>
+      <p>Información importante sobre el cuidado del medio ambiente.</p>
+    </div>
+  </div>
+</section>
+
+<section id="blog">
+  <div class="section-title">
+    <h2>✨ Publicaciones destacadas</h2>
+  </div>
+
+  <div class="posts">
+    <div class="post">
+      <img src="https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1200&auto=format&fit=crop" alt="Planta">
+      <div class="post-content">
+        <h3>5 hábitos sostenibles</h3>
+        <p>Pequeños cambios diarios que generan un gran impacto positivo.</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Naturaleza">
+      <div class="post-content">
+        <h3>Menos plástico, más vida</h3>
+        <p>Cómo reducir residuos y proteger los ecosistemas naturales.</p>
+      </div>
+    </div>
+
+    <div class="post">
+      <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1200&auto=format&fit=crop" alt="Bosque">
+      <div class="post-content">
+        <h3>La naturaleza nos necesita</h3>
+        <p>Cuidar el planeta es cuidar nuestro futuro y nuestras vidas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="subscribe">
+    <h2>🌿 Únete a la comunidad verde</h2>
+    <p>Recibe consejos, inspiración y recursos sobre sostenibilidad.</p>
+
+    <input type="email" placeholder="Tu correo electrónico">
+    <button>Suscribirme</button>
+  </div>
+</section>
+
+<footer>
+  💚 Cuidar el planeta es cuidar nuestro futuro • Vive Verde 2026
+</footer>
+
+</body>
+</html>
